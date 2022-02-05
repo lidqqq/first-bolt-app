@@ -7,6 +7,7 @@
     "dev": "nodemon --exec 'node -r tsm' ./api/index.ts",
     "ngrok": "ngrok http 3000",
     "build": "esbuild --bundle api/index.ts --outdir=dist --platform=node",
+    "postbuild": "mv -iv dist/index.js public/index.js",
     "start": "node ./dist"
   },
   "nodemonConfig": {
