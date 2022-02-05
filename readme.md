@@ -14,3 +14,5 @@ When you run `npm run dev`, you always need to set ngrok forwarding endpoints to
   - ので、bolt 側のエンドポイントを変えてやる必要がある
     - `endpoints: ['/api/slack/events']`
 - runtime は node.js っぽいので、`-r tsm` とかはダメっぽい。ので vercel では js へ build する
+- `processBeforeResponse: true` を設定する
+  - @see: https://slack.dev/bolt-js/ja-jp/deployments/aws-lambda#:~:text=processbeforeresponse%3A%20true
