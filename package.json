@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec 'node -r tsm' ./api/index.ts",
     "ngrok": "ngrok http 3000",
-    "build": "echo no build",
+    "build": "mkdir -p public",
     "start": "node -r tsm ./api/index.ts"
   },
   "nodemonConfig": {
