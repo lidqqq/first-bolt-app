@@ -12,7 +12,7 @@ app.command('/echo', async ({ command, ack, respond, say }) => {
 });
 
 // コマンド起動をリッスン
-app.command('/ticket', async ({ ack, body, client, logger }) => {
+app.command('/ticket', async ({ ack, body, client, logger, say }) => {
   // コマンドのリクエストを確認
   await ack();
 
@@ -65,6 +65,7 @@ app.command('/ticket', async ({ ack, body, client, logger }) => {
         }
       }
     });
+    await say(`submitteed！！！`);
     logger.info(result);
   }
   catch (error) {
