@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec 'node -r tsm' src/index.ts",
+    "dev": "nodemon --exec 'node -r tsm' ./api/index.ts",
     "ngrok": "ngrok http 3000",
-    "start": "node -r tsm ./src/index.ts"
+    "build": "echo no build",
+    "start": "node -r tsm ./api/index.ts"
   },
   "nodemonConfig": {
     "ignore": [
@@ -19,11 +20,12 @@
   "license": "MIT",
   "dependencies": {
     "@slack/bolt": "3.9.0",
-    "dotenv": "16.0.0",
     "@types/node": "17.0.15",
+    "dotenv": "16.0.0",
     "tsm": "2.2.1"
   },
   "devDependencies": {
-    "nodemon": "2.0.15"
+    "nodemon": "2.0.15",
+    "vercel": "23.1.2"
   }
 }
