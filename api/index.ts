@@ -2,8 +2,9 @@ import { app } from './app';
 import './handlers';
 
 (async () => {
+  const port = process.env.PORT || 80;
   // アプリを起動します
-  await app.start(process.env.PORT || 3000);
+  await app.start(port);
 
-  console.log('⚡️ Bolt app is running!');
+  console.log(`⚡️ Bolt app is running at port:${port}!`);
 })();
