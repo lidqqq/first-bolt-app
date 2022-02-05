@@ -133,3 +133,4 @@ dist
 
 api/index.js
 public/index.js
+manifest.json
