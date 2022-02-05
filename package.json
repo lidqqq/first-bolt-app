@@ -1,0 +1,29 @@
+{
+  "name": "first-bolt-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec 'node -r tsm' src/index.ts",
+    "ngrok": "ngrok http 3000",
+    "start": "node -r tsm ./src/index.ts"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*"
+    ],
+    "delay": 500
+  },
+  "keywords": [],
+  "author": "lidqqq <lidqqq.dev@gmail.com> (https://lidqqq.dev/)",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "3.9.0",
+    "dotenv": "16.0.0",
+    "@types/node": "17.0.15",
+    "tsm": "2.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  }
+}
