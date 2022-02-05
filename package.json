@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "run-p dev:*",
     "dev:nodemo": "nodemon --exec 'node -r tsm' ./api/index.ts",
-    "dev:ngrok": "ngrok http 80",
+    "dev:ngrok": "ngrok http 3000",
     "build": "esbuild --bundle api/index.ts --outdir=dist --platform=node",
     "postbuild": "mv -iv dist/index.js api/index.js",
     "start": "node ./dist"
