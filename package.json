@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon --exec 'node -r tsm' ./api/index.ts",
     "ngrok": "ngrok http 3000",
-    "build": "mkdir -p public",
-    "start": "node -r tsm ./api/index.ts"
+    "build": "esbuild --bundle api/index.ts --outdir=dist --platform=node",
+    "start": "node ./dist"
   },
   "nodemonConfig": {
     "ignore": [
@@ -22,10 +22,14 @@
     "@slack/bolt": "3.9.0",
     "@types/node": "17.0.15",
     "dotenv": "16.0.0",
+    "esbuild": "0.14.18",
     "tsm": "2.2.1"
   },
   "devDependencies": {
     "nodemon": "2.0.15",
     "vercel": "23.1.2"
+  },
+  "volta": {
+    "node": "16.13.2"
   }
 }
