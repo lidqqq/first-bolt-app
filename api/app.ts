@@ -5,8 +5,7 @@ import 'dotenv/config';
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
-  endpoints: ['/api/slack/events'],
-  processBeforeResponse: true
+  endpoints: ['/api/slack/events']
 });
 
 export { app };
