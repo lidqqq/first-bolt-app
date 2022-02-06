@@ -131,6 +131,6 @@ dist
 
 .vercel
 
-api
+# api
 public
 manifest.json
