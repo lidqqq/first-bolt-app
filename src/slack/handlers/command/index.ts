@@ -2,8 +2,6 @@ import { app } from '../../app';
 
 // この echo コマンドは ただ、その引数を（やまびこのように）おうむ返しする
 app.command('/echo', async ({ command, ack, respond, say }) => {
-  console.log({ command });
-
   // コマンドリクエストを確認
   await ack();
 

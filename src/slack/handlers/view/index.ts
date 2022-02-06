@@ -2,8 +2,6 @@ import { app } from '../../app';
 
 // モーダルでのデータ送信リクエストを処理します
 app.view('view_1', async ({ ack, body, view, client, logger }) => {
-  console.log({ view, body }, JSON.stringify(view['state']['values'], null, 2));
-
   // モーダルでのデータ送信リクエストを確認
   await ack();
 
@@ -19,11 +17,8 @@ app.view('view_1', async ({ ack, body, view, client, logger }) => {
       channel: user,
       text: val.value
     });
-    console.log('end');
-
   }
   catch (error) {
-    console.log('eerr');
     logger.error(error);
   }
 

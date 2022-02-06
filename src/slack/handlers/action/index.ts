@@ -9,8 +9,6 @@ app.action('button_click', async ({ body, ack, say, respond }) => {
 });
 
 app.action<DialogSubmitAction>('button_abc', async ({ ack, client, body }) => {
-  // console.log({ param });
-
   const user = body['user']['id'];
   // アクションのリクエストを確認
   await ack();
