@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "run-p dev:*",
     "dev:nodemo": "nodemon --exec 'node -r tsm' ./api/index.ts",
-    "dev:ngrok": "ngrok http 3000",
-    "build": "esbuild --bundle ./api/index.ts --outdir=api --platform=node",
-    "start": "node ./dist"
+    "dev:ngrok": "ngrok http 3000"
   },
   "nodemonConfig": {
     "ignore": [
