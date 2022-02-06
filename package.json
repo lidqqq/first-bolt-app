@@ -5,9 +5,9 @@
   "main": "./api/index.js",
   "scripts": {
     "dev": "run-p dev:*",
-    "dev:nodemo": "nodemon --exec 'node -r tsm' ./src/index.ts",
+    "dev:nodemo": "nodemon --exec 'node -r tsm' ./api/index.ts",
     "dev:ngrok": "ngrok http 3000",
-    "build": "esbuild --bundle ./src/index.ts --outdir=api --platform=node",
+    "build": "esbuild --bundle ./api/index.ts --outdir=api --platform=node",
     "start": "node ./dist"
   },
   "nodemonConfig": {

@@ -131,6 +131,6 @@ dist
 
 .vercel
 
-# api
+api/index.js
 public
 manifest.json
